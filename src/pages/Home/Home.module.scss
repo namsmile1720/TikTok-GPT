@@ -1,0 +1,47 @@
+.Header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.avatar {
+    border-radius: 50%;
+    height: fit-content;
+    width: 60px;
+    height: 60px;
+}
+.info {
+    display: flex;
+    gap: 10px;
+}
+.Wraper {
+    display: flex;
+    gap: 10px;
+}
+.Box-wraper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.name {
+    font-weight: 700;
+    font-size: 18px;
+}
+.video-wrap {
+    margin-top: 10px;
+}
+.username {
+    font-size: 14px;
+}
+.player-wraper {
+    width: 50%;
+}
+.chat-gpt-box {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}

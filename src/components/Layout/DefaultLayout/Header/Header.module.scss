@@ -1,0 +1,46 @@
+.wrapper {
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+    display: flex;
+    justify-content: center;
+}
+.content {
+    height: 100%;
+    width: 1150px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.more-btn {
+    font-size: 2rem;
+    margin-left: 20px;
+    background: transparent;
+    border: none;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+    }
+    .upload-btn {
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+    .user-loggin {
+        padding: 0 20px;
+    }
+}

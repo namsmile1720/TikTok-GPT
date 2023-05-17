@@ -1,0 +1,26 @@
+.menu-items {
+    width: 224px;
+    button {
+        margin-left: 0 !important;
+        text-align: start;
+        padding-right: 0 !important;
+        background: #fff !important;
+        width: 100% !important;
+        &:hover {
+            background: #ccc !important ;
+            cursor: pointer !important;
+        }
+    }
+}
+.header {
+    display: flex;
+    text-align: center;
+    button {
+        border: none;
+        width: fit-content !important;
+    }
+    p {
+        width: 100%;
+        font-weight: 700;
+    }
+}
