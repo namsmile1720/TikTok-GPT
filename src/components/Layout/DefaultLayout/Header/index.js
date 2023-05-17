@@ -76,7 +76,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
-                <Link to={`/Home`} className={cx('wrapper')}>
+                <Link to={`/`} className={cx('wrapper')}>
                     <div className={cx('logo')}>
                         <svg height="42" width="118" alt="TikTok">
                             <g clipPath="url(#clip0)">

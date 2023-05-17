@@ -9,7 +9,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { faMusic } from '@fortawesome/free-solid-svg-icons';
 import ChatBoxGPT from '~/components/ChatGPT-box';
 import Button from '~/components/Button';
-
+import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function Home() {
@@ -22,16 +22,16 @@ function Home() {
     useEffect(() => {
         const fetchVideos = () => {
             const options = {
-                method: 'GET',
-                url: 'https://tiktok-video-no-watermark2.p.rapidapi.com/feed/list',
-                params: {
-                    region: 'VN',
-                    count: '5',
-                },
-                headers: {
-                    'X-RapidAPI-Key': '30af2a3413msh210fec5dfd50b19p17955bjsn6c236f20722d',
-                    'X-RapidAPI-Host': 'tiktok-video-no-watermark2.p.rapidapi.com',
-                },
+                // method: 'GET',
+                // url: 'https://tiktok-video-no-watermark2.p.rapidapi.com/feed/list',
+                // params: {
+                //     region: 'VN',
+                //     count: '5',
+                // },
+                // headers: {
+                //     'X-RapidAPI-Key': '30af2a3413msh210fec5dfd50b19p17955bjsn6c236f20722d',
+                //     'X-RapidAPI-Host': 'tiktok-video-no-watermark2.p.rapidapi.com',
+                // },
             };
             axios.request(options).then(function (response) {
                 // console.log(response.data.data);
@@ -61,14 +61,21 @@ function Home() {
             {videos.map((item, index) => {
                 return (
                     <div className={cx('Wraper')} key={index}>
-                        <Image className={cx('avatar')} src={item.author.avatar} alt={null} />
+                        <Link to={`/profile`}>
+                            <Image className={cx('avatar')} src={item.author.avatar} alt={null} />
+                        </Link>
                         <div className={cx('Box-wraper')}>
                             <div className={cx('Header')}>
                                 <div className={cx('info')}>
-                                    <div className={cx('name')}>
-                                        <span>{item.author.nickname}</span>
-                                        {item.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
-                                    </div>
+                                    <Link to={`/profile`} className={cx('name-wrap')}>
+                                        <div className={cx('name')}>
+                                            <span>{item.author.nickname}</span>
+                                            {item.tick && (
+                                                <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                                            )}
+                                        </div>
+                                    </Link>
+
                                     <span className={cx('username')}>{item.author.unique_id}</span>
                                 </div>
                             </div>
@@ -89,7 +96,7 @@ function Home() {
             <div className={cx('chat-gpt-box')}>
                 {isChatOpen && <ChatBoxGPT />}
                 <Button primary={true} onClick={handleButtonChatClick}>
-                    chat
+                    Chat GPT
                 </Button>
             </div>
         </div>
