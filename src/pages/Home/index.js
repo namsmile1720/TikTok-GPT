@@ -22,16 +22,16 @@ function Home() {
     useEffect(() => {
         const fetchVideos = () => {
             const options = {
-                // method: 'GET',
-                // url: 'https://tiktok-video-no-watermark2.p.rapidapi.com/feed/list',
-                // params: {
-                //     region: 'VN',
-                //     count: '5',
-                // },
-                // headers: {
-                //     'X-RapidAPI-Key': '30af2a3413msh210fec5dfd50b19p17955bjsn6c236f20722d',
-                //     'X-RapidAPI-Host': 'tiktok-video-no-watermark2.p.rapidapi.com',
-                // },
+                method: 'GET',
+                url: 'https://tiktok-video-no-watermark2.p.rapidapi.com/feed/list',
+                params: {
+                    region: 'VN',
+                    count: '5',
+                },
+                headers: {
+                    'X-RapidAPI-Key': '30af2a3413msh210fec5dfd50b19p17955bjsn6c236f20722d',
+                    'X-RapidAPI-Host': 'tiktok-video-no-watermark2.p.rapidapi.com',
+                },
             };
             axios.request(options).then(function (response) {
                 // console.log(response.data.data);
